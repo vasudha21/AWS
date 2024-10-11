@@ -1,0 +1,64 @@
+Web service that provide resizeable compute capacity in cloud.
+Each virtual server known as "instance".
+Preconfig template for instance called Amazon Machine Image.
+Has full control on OS layer
+Key pair (public key and pvt key).
+
+used to securely connect to EC2 instance.
+
+Category:
+1. General purpose.
+2. Compute optimized
+3. Memory Optimized
+4. Accelerated Computing
+5. Storage Optimized
+
+Launching EC2 instance: options to select-
+AMI to select
+Auto-assign IP- default to use subset setting
+Termination protection
+IAM role
+Basic monitoring
+add script to run
+join to a directory
+Storage options
+Non root volumes can be encrypted
+
+Dedicated host
+Physical server dedicated for use
+Control which server deploy on the host
+Complete isolation most expensive option
+
+IP address
+Public, private, elastic IP can be assigned to instance
+
+IAM roles
+more secure than storing access key and secret access key
+
+Bastion/jump hosts
+configure instance as Bastion as jump host to access VPC instance for management
+can also use AWS system manager instead of using bastion host
+
+Monitor EC2
+problem that can cause system check to fail: network connection loss, system power loss, software issue on physical host, exhaust memory, corrupt file system, incompatible kernel
+
+unified cloudwatch agent
+collect more system level metric across OS.
+Collect system-level metrics from on-premises servers.
+Collect logs from Amazon EC2 instances and on-premises servers, running either Linux or Windows Server.
+Retrieve custom metrics from your applications or services using the StatsD and collectd protocols.
+
+Logging and Auditing
+integrated with AWS Cloudtrail (to record action taken by user, role and AWS service in EC2 and EBS)
+Cloudtrail capture all API call for EC2 and EBS, store record indefinetly
+
+Tags
+label assign to AWS resource
+help you manage, identify, organize, search for, and filter resource
+consist of key and optional value
+used for cost allocation, security automation and many other uses.
+most resource can have upto 50 tags
+
+high availability approach for compute
+uptodate AMI are critical for rapid failover
+AMI can be copied to other region
